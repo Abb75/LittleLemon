@@ -35,6 +35,10 @@ class BookingViewSet(ListCreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
+class SingleBookingView(RetrieveUpdateAPIView, DestroyAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+
 class UserViewSet(ListCreateAPIView):
    queryset = User.objects.all()
    serializer_class = UserSerializer

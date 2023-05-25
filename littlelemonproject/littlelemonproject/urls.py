@@ -5,7 +5,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from rest_framework import views
-from littlelemonapi.views import BookingViewSet
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework import routers
 
@@ -16,7 +15,6 @@ urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api-token-auth/', obtain_auth_token)
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS )
 
